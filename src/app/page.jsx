@@ -162,7 +162,7 @@ function Services() {
 
 export const metadata = {
   description:
-    'We are developer studio working at the intersection of design and technology.',
+    'We pioneer AI-powered customer support bots and automations, driven by innovation and a passion for exceptional customer experiences.',
 }
 
 export default async function Home() {
