@@ -1,0 +1,79 @@
+@tailwind base;
+
+@font-face {
+  font-family: 'Mona Sans';
+  font-weight: 200 900;
+  font-display: block;
+  font-style: normal;
+  font-stretch: 75% 125%;
+  src: url('../fonts/Mona-Sans.var.woff2') format('woff2');
+}
+
+:root {
+  --primary: #8fb3ff;
+  --secondary: #ededed;
+  --accent: #d32f2f;
+  --background: #050505;
+}
+
+::selection {
+  background-color: var(--accent);
+  color: var(--secondary);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.back-to-top-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--primary);
+  color: var(--background);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  opacity: 0.8;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.back-to-top-button:hover {
+  opacity: 1;
+}
+
+@keyframes gradient-anim {
+  from {
+    background-position: 0% center;
+  }
+  to {
+    background-position: -400% center;
+  }
+}
+
+.heroGradient {
+  background: linear-gradient(
+    120deg,
+    var(--primary),
+    var(--accent),
+    var(--primary),
+    var(--accent),
+    var(--primary)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 400%;
+  animation: gradient-anim 40s linear infinite;
+}
+
+.heroGradient::selection {
+  -webkit-background-clip: unset;
+  background-clip: unset;
+  -webkit-text-fill-color: initial;
+}
