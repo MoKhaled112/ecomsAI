@@ -4,43 +4,26 @@ import { Border } from '@/components/Border'
 import { ContactSection } from '@/components/ContactSection'
 import { Container } from '@/components/Container'
 import { FadeIn, FadeInStagger } from '@/components/FadeIn'
-import { GridList, GridListItem } from '@/components/GridList'
 import { PageIntro } from '@/components/PageIntro'
 import { SectionIntro } from '@/components/SectionIntro'
 import { StatList, StatListItem } from '@/components/StatList'
 
-import imageBenjamin from '@/images/team/Benjamin.png'
-import imageJames from '@/images/team/James.png'
+import imageBenjamin from '@/images/team/Benjamin.jpg'
+import imageJames from '@/images/team/James.jpg'
 import imageCarlos from '@/images/team/Carlos.jpg'
 import imageMo from '@/images/team/Mo.jpg'
 
-function Culture() {
+function Mission() {
   return (
     <div className="mt-24 rounded-4xl bg-secondary py-24 sm:mt-32 lg:mt-40 lg:py-32">
       <SectionIntro
-        eyebrow="Our culture"
-        title="Balance your passion with your passion for life."
+        eyebrow="Our Mission"
+        title="Lower the barrier of entry for Ecommerce businesses."
       >
         <p>
-          We are a group of like-minded people who share the same core values.
+        to revolutionize the way Ecommerce companies interact with their customers. We believe that exceptional customer support is the backbone of every successful business, and our AI bots are designed to enhance efficiency, foster customer satisfaction, and build lasting relationships.
         </p>
       </SectionIntro>
-      <Container className="mt-16">
-        <GridList>
-          <GridListItem title="Loyalty">
-            Our team has been with us since the beginning because none of them
-            are allowed to have LinkedIn profiles.
-          </GridListItem>
-          <GridListItem title="Trust">
-            We don’t care when our team works just as long as they are working
-            every waking second.
-          </GridListItem>
-          <GridListItem title="Compassion">
-            You never know what someone is going through at home and we make
-            sure to never find out.
-          </GridListItem>
-        </GridList>
-      </Container>
     </div>
   )
 }
@@ -98,7 +81,7 @@ function Team() {
                           <Image
                             alt={person.name}
                             {...person.image}
-                            className="h-96 w-full object-cover grayscale transition duration-500 motion-safe:group-hover:scale-105"
+                            className="h-96 w-full object-cover grayscale transition duration-500 motion-safe:group-hover:scale-105 motion-safe:group-hover:grayscale-0"
                           />
                           <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black to-black/0 to-40% p-6">
                             <p className="font-display text-base/6 font-semibold tracking-wide text-white">
@@ -125,32 +108,19 @@ function Team() {
 export const metadata = {
   title: 'About Us',
   description:
-    'We believe that our strength lies in our collaborative approach, which puts our clients at the center of everything we do.',
+    'The pioneers in providing AI-powered customer support bots and automations tailored specifically for Ecommerce companies.',
 }
 
 export default async function About() {
 
   return (
     <>
-      <PageIntro eyebrow="About us" title="Our strength is collaboration">
+      <PageIntro eyebrow="About us" title="Elevate your customer support game">
         <p>
-          We believe that our strength lies in our collaborative approach, which
-          puts our clients at the center of everything we do.
+          At Ecoms AI, we are the pioneers in providing AI-powered customer support bots and automations tailored specifically for Ecommerce
+          companies. With an unwavering commitment to innovation and a passion for delivering exceptional customer experiences, our goal is to
+          be a trusted partner for businesses looking to elevate their customer support game.
         </p>
-        <div className="mt-10 max-w-2xl space-y-6 text-base">
-          <p>
-            Studio was started by three friends who noticed that developer
-            studios were charging clients double what an in-house team would
-            cost. Since the beginning, we have been committed to doing things
-            differently by charging triple instead.
-          </p>
-          <p>
-            At Studio, we’re more than just colleagues — we’re a family. This
-            means we pay very little and expect people to work late. We want our
-            employees to bring their whole selves to work. In return, we just
-            ask that they keep themselves there until at least 6:30pm.
-          </p>
-        </div>
       </PageIntro>
       <Container className="mt-16">
         <StatList>
@@ -160,7 +130,7 @@ export default async function About() {
         </StatList>
       </Container>
 
-      <Culture />
+      <Mission />
 
       <Team />
 
