@@ -45,6 +45,7 @@ function Navigation() {
                   <Link
                     href={link.href}
                     className="transition text-background hover:underline underline-offset-4"
+                    target="_blank"
                   >
                     {link.title}
                   </Link>

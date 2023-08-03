@@ -128,13 +128,14 @@ function Values() {
 
       <SectionIntro
         eyebrow="Our values"
-        title="Balancing reliability and innovation"
+        title="Customer-Centric Excellence"
       >
         <p>
-          We strive to stay at the forefront of emerging trends and
-          technologies, while completely ignoring them and forking that old
-          Rails project we feel comfortable using. We stand by our core values
-          to justify that decision.
+        We are deeply committed to understanding and fulfilling the needs of our clients. Your success is our success, and we take pride in going the
+        extra mile to deliver solutions that exceed your business goals. Our values revolve around transparency, integrity,
+        and open communication. We prioritize building long-term relationships with our clients, serving as strategic partners in their
+        growth journey. Every decision we make, every line of code we write, and every feature we implement is driven by the goal of enhancing
+        your business and empowering your brand.
         </p>
       </SectionIntro>
 
@@ -174,11 +175,12 @@ export const metadata = {
 export default function Process() {
   return (
     <>
-      <PageIntro eyebrow="Our process" title="How we work">
+      <PageIntro eyebrow="Our process" title="Collaborative and Iterative Approach">
         <p>
-          We believe in efficiency and maximizing our resources to provide the
-          best value to our clients. The primary way we do that is by re-using
-          the same five projects we’ve been developing for the past decade.
+        We begin by engaging with your team and understanding your business objectives, target audience, and unique challenges.
+        Through this collaboration, we gain valuable insights that guide us in crafting tailor-made solutions, this allows us to adapt and fine-tune our AI creations.
+        By working closely with you throughout the development journey, we ensure that the end product aligns perfectly with your brand vision and
+        delivers exceptional results.
         </p>
       </PageIntro>
 

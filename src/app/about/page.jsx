@@ -53,7 +53,7 @@ const team = [
         image: { src: imageMo },
         socials: [
           { platform: 'LinkedIn', url: 'https://www.linkedin.com/in/mokhaled112/' },
-          { platform: 'GitHub', url: 'https://github.com/MoKhaled112/' },
+          { platform: 'GitHub', url: 'https://github.com/MoKhaled1112/' },
         ],
       },
       {
