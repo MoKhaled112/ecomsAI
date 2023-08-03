@@ -9,10 +9,6 @@ import { SectionIntro } from '@/components/SectionIntro'
 import { StylizedImage } from '@/components/StylizedImage'
 import { Testimonial } from '@/components/Testimonial'
 import { Quote } from '@/components/Quote'
-import logoBrightPath from '@/images/clients/bright-path/logo-dark.svg'
-import logoGreenLife from '@/images/clients/green-life/logo-dark.svg'
-import logoHomeWork from '@/images/clients/home-work/logo-dark.svg'
-import logoNorthAdventures from '@/images/clients/north-adventures/logo-dark.svg'
 import logoBotpress from '@/images/technologies/botpress-dark.svg'
 import logoCustomGPT from '@/images/technologies/CustomGPT.png'
 import logoManyChat from '@/images/technologies/ManyChat.png'
@@ -171,15 +167,15 @@ export default async function Home() {
     <>
       <Container className="mt-20 sm:mt-28 md:mt-48 mb-20">
         <FadeIn className="max-w-3xl">
-        <h1 class="font-display text-6xl font-medium tracking-tight text-secondary drop-shadow-md [text-wrap:balance] sm:text-7xl">
+        <h1 class="font-display text-4xl sm:text-6xl lg:text-7xl font-medium tracking-tight text-secondary drop-shadow-md [text-wrap:balance]">
           Your business is
           </h1>
-          <div class="inline-block px-4 pt-2 pb-2 bg-neutral-900 rounded-lg">
-          <h1 class="heroGradient font-display text-6xl font-medium tracking-tight [text-wrap:balance] sm:text-7xl">OVERSPENDING.</h1>
+          <div class="inline-block pr-4 pt-2 pb-2 bg-neutral-900 rounded-lg">
+          <h1 class="heroGradient font-display text-4xl sm:text-6xl lg:text-7xl font-medium tracking-tight [text-wrap:balance]">OVERSPENDING.</h1>
           </div>
 
-          <p className="mt-6 text-2xl text-secondary/80">
-          We pioneer AI-powered customer support bots and automations, driven by innovation and a passion for exceptional customer experiences. <a className='text-primary underline' href='/about'>Learn more</a>
+          <p className="mt-6 text-lg sm:text-2xl text-secondary/80">
+          We pioneer AI-powered customer support bots, marketing bots, and automations, driven by innovation and a passion for exceptional customer experiences. <a className='text-primary underline' href='/about'>Learn more</a>
           </p>
         </FadeIn>
       </Container>

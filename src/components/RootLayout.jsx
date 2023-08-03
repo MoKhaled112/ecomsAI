@@ -15,7 +15,7 @@ import { NavButton } from '@/components/NavButton'
 import { Container } from '@/components/Container'
 import { Footer } from '@/components/Footer'
 import { GridPattern } from '@/components/GridPattern'
-import { Logomark } from '@/components/Logo'
+import { Logo, Logomark } from '@/components/Logo'
 import { SocialMedia } from '@/components/SocialMedia'
 
 function XIcon() {
@@ -56,7 +56,11 @@ function Header({
           aria-label="Home"
         >
           <Logomark
-            className="h-8 sm:hidden"
+            className="block sm:hidden"
+            invert={!invert}
+          />
+          <Logo
+            className="hidden sm:block"
             invert={!invert}
           />
         </Link>
@@ -229,7 +233,7 @@ function RootLayoutInner({ children }) {
           className="relative isolate flex w-full flex-col pt-9"
         >
           <GridPattern
-            className="absolute inset-x-0 -top-14 -z-10 h-[1000px] w-full fill-secondary/90 /25 stroke-accent/10 [mask-image:linear-gradient(to_bottom_left,background_40%,transparent_50%)]"
+            className="absolute inset-x-0 -top-14 -z-10 h-[1000px] w-full fill-primary/75 stroke-accent/10 [mask-image:linear-gradient(to_bottom_left,background_40%,transparent_50%)]"
             yOffset={-96}
             interactive
           />

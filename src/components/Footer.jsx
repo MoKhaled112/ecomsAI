@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
-import { Logomark } from '@/components/Logo'
+import { Logo } from '@/components/Logo'
 import { socialMediaProfiles } from '@/components/SocialMedia'
 
 const navigation = [
@@ -115,7 +115,7 @@ export function Footer() {
         </div>
         <div className="mb-16 mt-20 flex flex-wrap items-end justify-between gap-x-6 gap-y-4 border-t border-accent pt-12">
           <Link href="/" aria-label="Home">
-            <Logomark className="h-8" fillOnHover />
+            <Logo className="block" />
           </Link>
           <p className="text-sm text-neutral-700">
             © Ecoms AI Agency 2023
