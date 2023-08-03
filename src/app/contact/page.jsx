@@ -30,57 +30,32 @@ function TextInput({ label, ...props }) {
   )
 }
 
-function RadioInput({ label, ...props }) {
-  return (
-    <label className="flex gap-x-3">
-      <input
-        type="radio"
-        {...props}
-        className="h-6 w-6 flex-none appearance-none rounded-full border border-neutral-950/20 outline-none checked:border-[0.5rem] checked:border-neutral-950 focus-visible:ring-1 focus-visible:ring-neutral-950 focus-visible:ring-offset-2"
-      />
-      <span className="text-base/6 text-neutral-950">{label}</span>
-    </label>
-  )
-}
-
 function ContactForm() {
   return (
     <FadeIn className="lg:order-last">
-      <form>
-        <h2 className="font-display text-base font-semibold text-neutral-950">
-          Work inquiries
-        </h2>
-        <div className="isolate mt-6 -space-y-px rounded-2xl bg-white/50">
-          <TextInput label="Name" name="name" autoComplete="name" />
-          <TextInput
-            label="Email"
-            type="email"
-            name="email"
-            autoComplete="email"
-          />
-          <TextInput
-            label="Company"
-            name="company"
-            autoComplete="organization"
-          />
-          <TextInput label="Phone" type="tel" name="phone" autoComplete="tel" />
-          <TextInput label="Message" name="message" />
-          <div className="border border-neutral-300 px-6 py-8 first:rounded-t-2xl last:rounded-b-2xl">
-            <fieldset>
-              <legend className="text-base/6 text-neutral-500">Budget</legend>
-              <div className="mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2">
-                <RadioInput label="$25K – $50K" name="budget" value="25" />
-                <RadioInput label="$50K – $100K" name="budget" value="50" />
-                <RadioInput label="$100K – $150K" name="budget" value="100" />
-                <RadioInput label="More than $150K" name="budget" value="150" />
-              </div>
-            </fieldset>
-          </div>
-        </div>
-        <Button type="submit" className="mt-10">
-          Let’s work together
-        </Button>
-      </form>
+<form
+  method="POST"
+  data-netlify="true"
+  name="contact_us_page"
+>
+  <input type="hidden" name="form-name" value="contact_us_page" />
+  <h2 className="font-display text-base font-semibold text-primary">
+    Contact us
+  </h2>
+  <div className="isolate mt-6 -space-y-px rounded-2xl bg-secondary">
+    <TextInput label="Name" name="name" autoComplete="name" />
+    <TextInput label="Email" type="email" name="email" autoComplete="email" />
+    <TextInput label="Company" name="company" autoComplete="organization" />
+    <TextInput label="Phone" type="tel" name="phone" autoComplete="tel" />
+    <TextInput label="Message" name="message" />
+    <div className="border border-neutral-300 px-6 py-8 first:rounded-t-2xl last:rounded-b-2xl">
+    <Button type="submit" className="mt-10">
+    Let’s work together
+  </Button>
+  </div>
+  </div>
+</form>
+
     </FadeIn>
   )
 }
@@ -88,42 +63,17 @@ function ContactForm() {
 function ContactDetails() {
   return (
     <FadeIn>
-      <h2 className="font-display text-base font-semibold text-neutral-950">
-        Our offices
-      </h2>
-      <p className="mt-6 text-base text-neutral-600">
-        Prefer doing things in person? We don’t but we have to list our
-        addresses here for legal reasons.
-      </p>
-      <Border className="mt-16 pt-16">
-        <h2 className="font-display text-base font-semibold text-neutral-950">
+        <h2 className="font-display text-base font-semibold text-primary mb-4">
           Email us
         </h2>
-        <dl className="mt-6 grid grid-cols-1 gap-8 text-sm sm:grid-cols-2">
-          {[
-            ['Careers', 'careers@studioagency.com'],
-            ['Press', 'press@studioagency.com'],
-          ].map(([label, email]) => (
-            <div key={email}>
-              <dt className="font-semibold text-neutral-950">{label}</dt>
-              <dd>
-                <Link
-                  href={`mailto:${email}`}
-                  className="text-neutral-600 hover:text-neutral-950"
-                >
-                  {email}
-                </Link>
-              </dd>
-            </div>
-          ))}
-        </dl>
-      </Border>
+        <a className="font-display text-2xl text-secondary hover:underline underline-offset-8" href="mailto:hello@ecomsai.com" target="_blank" rel="noreferrer">hello@ecomsai.com</a>
+
 
       <Border className="mt-16 pt-16">
-        <h2 className="font-display text-base font-semibold text-neutral-950">
-          Follow us
+        <h2 className="font-display text-base font-semibold text-primary">
+          Connect
         </h2>
-        <SocialMedia className="mt-6" />
+        <SocialMedia invert className="mt-6" />
       </Border>
     </FadeIn>
   )

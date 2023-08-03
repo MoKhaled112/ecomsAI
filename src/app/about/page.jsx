@@ -36,7 +36,7 @@ const team = [
         image: { src: imageJames },
         socials: [
           { platform: 'LinkedIn', url: 'https://www.linkedin.com/in/james-rawlings-4877121b6' },
-          { platform: 'Twitter', url: 'https://twitter.com/pixelJamesR' },
+          { platform: 'Twitter', url: 'https://twitter.com/jamesr_ai' },
         ],
       },
       {
@@ -101,8 +101,6 @@ function Team() {
             {person.name}
           </p>
           <p className="mt-2 text-sm text-white">{person.role}</p>
-          
-          {/* Social Media Links */}
           <div className="mt-2 flex space-x-2">
             {person.socials.map((social) => (
               <a
@@ -152,7 +150,7 @@ function Team() {
 export const metadata = {
   title: 'About Us',
   description:
-    'The pioneers in providing AI-powered customer support bots and automations tailored specifically for Ecommerce companies.',
+    'The pioneers in providing AI-powered customer support bots, marketing bots, and automations tailored specifically for Ecommerce companies.',
 }
 
 export default async function About() {
@@ -161,7 +159,7 @@ export default async function About() {
     <>
       <PageIntro eyebrow="About us" title="Elevate your customer support game">
         <p>
-          At Ecoms AI, we are the pioneers in providing AI-powered customer support bots and automations tailored specifically for Ecommerce
+          At Ecoms AI, we are the pioneers in providing AI-powered customer support bots, marketing bots, and automations tailored specifically for Ecommerce
           companies. With an unwavering commitment to innovation and a passion for delivering exceptional customer experiences, our goal is to
           be a trusted partner for businesses looking to elevate their customer support game.
         </p>

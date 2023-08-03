@@ -9,7 +9,6 @@ import { SectionIntro } from '@/components/SectionIntro'
 import { StylizedImage } from '@/components/StylizedImage'
 import { Testimonial } from '@/components/Testimonial'
 import { Quote } from '@/components/Quote'
-import logoBotpress from '@/images/technologies/botpress-dark.svg'
 import logoCustomGPT from '@/images/technologies/CustomGPT.png'
 import logoManyChat from '@/images/technologies/ManyChat.png'
 import logoZapier from '@/images/technologies/zapier.png'
@@ -17,7 +16,6 @@ import imageLaptop from '@/images/laptop.jpg'
 import { loadMDXMetadata } from '@/lib/loadMDXMetadata'
 
 const technologies = [
-  ['Botpress', logoBotpress],
   ['CustomGPT', logoCustomGPT],
   ['Zapier', logoZapier],
   ['ManyChat', logoManyChat],
@@ -36,11 +34,11 @@ function Technologies() {
         <FadeInStagger faster>
         <ul
   role="list"
-  className="mt-10 grid grid-cols-2 gap-x-8 gap-y-10 lg:grid-cols-4"
+  className="mt-10 grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-3"
 >
   {technologies.map(([technology, logo]) => (
     <li key={technology}>
-      <div className="max-w-[230px] max-h-[50px] flex justify-center">
+      <div className="max-w-[250px] max-h-[100px] flex justify-between">
         <FadeIn>
           <Image src={logo} alt={technology} className="object-contain h-full" loading="lazy" decoding="async" />
         </FadeIn>

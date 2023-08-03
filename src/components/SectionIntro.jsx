@@ -44,7 +44,7 @@ export function SectionIntro({
           <div
             className={clsx(
               'mt-6 text-xl',
-              invert ? 'text-secondary/60' : 'text-background/50'
+              invert ? 'text-secondary/80' : 'text-background/80'
             )}
           >
             {children}
