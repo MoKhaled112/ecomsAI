@@ -8,7 +8,7 @@ import { FadeIn } from '@/components/FadeIn'
 import { PageIntro } from '@/components/PageIntro'
 import { SocialMedia } from '@/components/SocialMedia'
 
-function TextInput({ label, ...props }) {
+function TextInput({ label, isRequired, ...props }) {
   let id = useId()
 
   return (
@@ -18,13 +18,15 @@ function TextInput({ label, ...props }) {
         id={id}
         {...props}
         placeholder=" "
+        required={isRequired}
         className="peer block w-full border border-neutral-300 bg-transparent px-6 pb-4 pt-12 text-base/6 text-neutral-950 ring-4 ring-transparent transition focus:border-neutral-950 focus:outline-none focus:ring-neutral-950/5 group-first:rounded-t-2xl group-last:rounded-b-2xl"
       />
       <label
         htmlFor={id}
         className="pointer-events-none absolute left-6 top-1/2 -mt-3 origin-left text-base/6 text-neutral-500 transition-all duration-200 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-neutral-950 peer-[:not(:placeholder-shown)]:-translate-y-4 peer-[:not(:placeholder-shown)]:scale-75 peer-[:not(:placeholder-shown)]:font-semibold peer-[:not(:placeholder-shown)]:text-neutral-950"
       >
-        {label}
+      {label}
+        {isRequired && <span className="text-red-500 text-lg ml-1">*</span>}
       </label>
     </div>
   )
@@ -37,17 +39,18 @@ function ContactForm() {
   method="POST"
   data-netlify="true"
   name="contact_us_page"
+  novalidate
 >
   <input type="hidden" name="form-name" value="contact_us_page" />
   <h2 className="font-display text-base font-semibold text-primary">
     Contact us
   </h2>
   <div className="isolate mt-6 -space-y-px rounded-2xl bg-secondary">
-    <TextInput label="Name" name="name" autoComplete="name" />
-    <TextInput label="Email" type="email" name="email" autoComplete="email" />
+    <TextInput label="Name" name="name" isRequired autoComplete="name" />
+    <TextInput label="Email" type="email" isRequired name="email" autoComplete="email" />
     <TextInput label="Company" name="company" autoComplete="organization" />
     <TextInput label="Phone" type="tel" name="phone" autoComplete="tel" />
-    <TextInput label="Message" name="message" />
+    <TextInput label="Message" isRequired name="message" />
     <div className="border border-neutral-300 px-6 py-8 first:rounded-t-2xl last:rounded-b-2xl">
     <Button type="submit" className="mt-10">
     Let’s work together
