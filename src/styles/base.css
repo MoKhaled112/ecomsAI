@@ -57,6 +57,7 @@ html {
 }
 
 .heroGradient {
+  display: block;
   background: linear-gradient(
     120deg,
     var(--primary),
@@ -76,4 +77,11 @@ html {
   -webkit-background-clip: unset;
   background-clip: unset;
   -webkit-text-fill-color: initial;
+}
+
+@media (max-width: 480px) {
+  .heroGradient {
+    word-break: break-all;
+    min-width: 8ch;
+  }
 }

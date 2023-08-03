@@ -13,7 +13,7 @@ const navigation = [
       { title: 'About', href: '/about' },
       { title: 'Services', href: '/services' },
       { title: 'Process', href: '/process' },
-      { title: 'Contact us', href: '/contact' },
+      { title: 'Work Cases', href: '/work' },
     ],
   },
   {
@@ -22,14 +22,6 @@ const navigation = [
       { title: 'FamilyFund', href: '/work/family-fund' },
       { title: 'Unseal', href: '/work/unseal' },
       { title: 'Phobia', href: '/work/phobia' },
-      {
-        title: (
-          <>
-            See all <span aria-hidden="true">&rarr;</span>
-          </>
-        ),
-        href: '/work',
-      },
     ],
   },
   {

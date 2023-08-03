@@ -9,7 +9,7 @@ function TwitterIcon(props) {
   );
 }
 
-function EmailIcon(props) {
+function ContactIcon(props) {
   return (
     <svg
       viewBox="0 0 512 512"
@@ -28,11 +28,17 @@ function EmailIcon(props) {
 
 
 
-
-function LinkedInIcon(props) {
+function EmailIcon(props) {
   return (
-    <svg {...props} aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-      <path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z" />
+    <svg
+      viewBox="0 0 512 512"
+      stroke="#050505"
+      strokeWidth="5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="h-6 w-6"  {...props}
+    >
+<path d="M256 64C150 64 64 150 64 256s86 192 192 192c17.7 0 32 14.3 32 32s-14.3 32-32 32C114.6 512 0 397.4 0 256S114.6 0 256 0S512 114.6 512 256v32c0 53-43 96-96 96c-29.3 0-55.6-13.2-73.2-33.9C320 371.1 289.5 384 256 384c-70.7 0-128-57.3-128-128s57.3-128 128-128c27.9 0 53.7 8.9 74.7 24.1c5.7-5 13.1-8.1 21.3-8.1c17.7 0 32 14.3 32 32v80 32c0 17.7 14.3 32 32 32s32-14.3 32-32V256c0-106-86-192-192-192zm64 192a64 64 0 1 0 -128 0 64 64 0 1 0 128 0z"/>
     </svg>
   );
 }
@@ -40,8 +46,8 @@ function LinkedInIcon(props) {
 
 export const socialMediaProfiles = [
   { title: 'Twitter', href: 'https://twitter.com/EcomsAI_', icon: TwitterIcon },
-  { title: 'LinkedIn', href: 'https://linkedin.com', icon: LinkedInIcon },
   { title: 'Email', href: 'mailto:hello@ecomsai.com', icon: EmailIcon },
+  { title: 'Contact us', href: '/contact', icon: ContactIcon },
 ]
 
 export function SocialMedia({ className, invert = false }) {

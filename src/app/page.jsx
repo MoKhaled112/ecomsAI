@@ -10,26 +10,21 @@ import { StylizedImage } from '@/components/StylizedImage'
 import { Testimonial } from '@/components/Testimonial'
 import { Quote } from '@/components/Quote'
 import logoBrightPath from '@/images/clients/bright-path/logo-dark.svg'
-import logoFamilyFund from '@/images/clients/family-fund/logo-dark.svg'
 import logoGreenLife from '@/images/clients/green-life/logo-dark.svg'
 import logoHomeWork from '@/images/clients/home-work/logo-dark.svg'
-import logoMailSmirk from '@/images/clients/mail-smirk/logo-dark.svg'
 import logoNorthAdventures from '@/images/clients/north-adventures/logo-dark.svg'
-import logoPhobiaDark from '@/images/clients/phobia/logo-dark.svg'
 import logoBotpress from '@/images/technologies/botpress-dark.svg'
-import logoUnseal from '@/images/clients/unseal/logo-dark.svg'
+import logoCustomGPT from '@/images/technologies/CustomGPT.png'
+import logoManyChat from '@/images/technologies/ManyChat.png'
+import logoZapier from '@/images/technologies/zapier.png'
 import imageLaptop from '@/images/laptop.jpg'
 import { loadMDXMetadata } from '@/lib/loadMDXMetadata'
 
 const technologies = [
-  ['Phobia', logoBotpress],
-  ['Family Fund', logoFamilyFund],
-  ['Unseal', logoUnseal],
-  ['Mail Smirk', logoMailSmirk],
-  ['Home Work', logoHomeWork],
-  ['Green Life', logoGreenLife],
-  ['Bright Path', logoBrightPath],
-  ['North Adventures', logoNorthAdventures],
+  ['Botpress', logoBotpress],
+  ['CustomGPT', logoCustomGPT],
+  ['Zapier', logoZapier],
+  ['ManyChat', logoManyChat],
 ]
 
 function Technologies() {
@@ -38,23 +33,27 @@ function Technologies() {
       <Container>
         <FadeIn className="flex items-center gap-x-8">
           <h2 className="text-center font-display text-sm font-semibold tracking-wider text-background sm:text-left">
-          We Use Modern Technologies to Deliver Cutting-Edge Solutions (needs a little work)
+          We Use Modern Technologies to Deliver Cutting-Edge Solutions
           </h2>
           <div className="h-px flex-auto bg-accent" />
         </FadeIn>
         <FadeInStagger faster>
-          <ul
-            role="list"
-            className="mt-10 grid grid-cols-2 gap-x-8 gap-y-10 lg:grid-cols-4"
-          >
-            {technologies.map(([technology, logo]) => (
-              <li key={technology} className="max-w-[230px] max-h-[36px]">
-                <FadeIn>
-                  <Image src={logo} alt={technology} unoptimized />
-                </FadeIn>
-              </li>
-            ))}
-          </ul>
+        <ul
+  role="list"
+  className="mt-10 grid grid-cols-2 gap-x-8 gap-y-10 lg:grid-cols-4"
+>
+  {technologies.map(([technology, logo]) => (
+    <li key={technology}>
+      <div className="max-w-[230px] max-h-[50px] flex justify-center">
+        <FadeIn>
+          <Image src={logo} alt={technology} className="object-contain h-full" loading="lazy" decoding="async" />
+        </FadeIn>
+      </div>
+    </li>
+  ))}
+</ul>
+
+
         </FadeInStagger>
       </Container>
     </div>
@@ -162,7 +161,7 @@ function Services() {
 
 export const metadata = {
   description:
-    'We pioneer AI-powered customer support bots and automations, driven by innovation and a passion for exceptional customer experiences.',
+    'We pioneer AI-powered customer support bots, marketing bots, and automations driven by innovation and a passion for exceptional customer experiences.',
 }
 
 export default async function Home() {
@@ -172,9 +171,13 @@ export default async function Home() {
     <>
       <Container className="mt-20 sm:mt-28 md:mt-48 mb-20">
         <FadeIn className="max-w-3xl">
-          <h1 className="font-display text-6xl font-medium tracking-tight text-secondary drop-shadow-md [text-wrap:balance] sm:text-7xl">
-            Your business is <span className="heroGradient">OVERSPENDING</span>.
+        <h1 class="font-display text-6xl font-medium tracking-tight text-secondary drop-shadow-md [text-wrap:balance] sm:text-7xl">
+          Your business is
           </h1>
+          <div class="inline-block px-4 pt-2 pb-2 bg-neutral-900 rounded-lg">
+          <h1 class="heroGradient font-display text-6xl font-medium tracking-tight [text-wrap:balance] sm:text-7xl">OVERSPENDING.</h1>
+          </div>
+
           <p className="mt-6 text-2xl text-secondary/80">
           We pioneer AI-powered customer support bots and automations, driven by innovation and a passion for exceptional customer experiences. <a className='text-primary underline' href='/about'>Learn more</a>
           </p>
