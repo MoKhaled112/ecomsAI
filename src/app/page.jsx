@@ -167,10 +167,10 @@ export default async function Home() {
     <>
       <Container className="mt-20 sm:mt-28 md:mt-48 mb-20">
         <FadeIn className="max-w-3xl">
-        <h1 class="font-display text-4xl sm:text-6xl lg:text-7xl font-medium tracking-tight text-secondary drop-shadow-md [text-wrap:balance]">
+        <h1 class="font-display pl-4 text-4xl sm:text-6xl lg:text-7xl font-medium tracking-tight text-secondary drop-shadow-md [text-wrap:balance]">
           Your business is
           </h1>
-          <div class="inline-block pr-4 pt-2 pb-2 bg-neutral-900 rounded-lg">
+          <div class="inline-block px-4 pt-2 pb-2 bg-neutral-900 rounded-lg">
           <h1 class="heroGradient font-display text-4xl sm:text-6xl lg:text-7xl font-medium tracking-tight [text-wrap:balance]">OVERSPENDING.</h1>
           </div>
 
