@@ -12,7 +12,7 @@ export const metadata = {
 export default function Layout({ children }) {
   return (
     <html id="top" lang="en" className="h-full bg-background text-secondary text-base antialiased">
-      <Head>
+      <head>
         {/* Include the Facebook Messenger Chat Plugin code here */}
         <script dangerouslySetInnerHTML={{
           __html: `
@@ -34,7 +34,7 @@ export default function Layout({ children }) {
         }} />
 
         
-      </Head>
+      </head>
 
       
       <body className="flex min-h-full flex-col">
