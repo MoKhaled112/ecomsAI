@@ -16,7 +16,6 @@ export default function Layout({ children }) {
         <script src="//widget.manychat.com/747804045285782.js" defer="defer"></script>
         <script src="https://mccdn.me/assets/js/widget.js" defer="defer"></script>
         {/* Include the Facebook Messenger Chat Plugin code here */}
-        <div id="fb-root"></div>
         <script dangerouslySetInnerHTML={{
           __html: `
             window.fbAsyncInit = function() {
@@ -42,6 +41,7 @@ export default function Layout({ children }) {
       
       <body className="flex min-h-full flex-col">
         <RootLayout>{children}</RootLayout>
+        <div id="fb-root"></div>
         <div id="fb-customer-chat" className="fb-customerchat" page_id="747804045285782" attribution="biz_inbox"></div>
 
         <a href="#top" className="back-to-top-button" aria-label="Back to Top">
