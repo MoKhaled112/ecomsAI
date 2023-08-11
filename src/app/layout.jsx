@@ -12,7 +12,7 @@ export const metadata = {
 export default function Layout({ children }) {
   return (
     <html id="top" lang="en" className="h-full bg-background text-secondary text-base antialiased">
-      <head>
+      <Head>
         <script src="//widget.manychat.com/747804045285782.js" defer="defer"></script>
         <script src="https://mccdn.me/assets/js/widget.js" defer="defer"></script>
         {/* Include the Facebook Messenger Chat Plugin code here */}
@@ -37,7 +37,7 @@ export default function Layout({ children }) {
         }} />
 
         
-      </head>
+      </Head>
 
       
       <body className="flex min-h-full flex-col">
