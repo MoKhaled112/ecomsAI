@@ -13,8 +13,6 @@ export default function Layout({ children }) {
   return (
     <html id="top" lang="en" className="h-full bg-background text-secondary text-base antialiased">
       <Head>
-        <script src="//widget.manychat.com/747804045285782.js" defer="defer"></script>
-        <script src="https://mccdn.me/assets/js/widget.js" defer="defer"></script>
         {/* Include the Facebook Messenger Chat Plugin code here */}
         <script dangerouslySetInnerHTML={{
           __html: `
