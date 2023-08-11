@@ -12,10 +12,10 @@ export const metadata = {
 export default function Layout({ children }) {
   return (
     <html id="top" lang="en" className="h-full bg-background text-secondary text-base antialiased">
-      <Head>
+      <head>
         <script src="//widget.manychat.com/747804045285782.js" defer="defer"></script>
         <script src="https://mccdn.me/assets/js/widget.js" defer="defer"></script>
-      </Head>
+      </head>
       <body className="flex min-h-full flex-col">
         <RootLayout>{children}</RootLayout>
         <a href="#top" className="back-to-top-button" aria-label="Back to Top">
