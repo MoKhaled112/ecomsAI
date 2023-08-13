@@ -1,6 +1,6 @@
 import clsx from 'clsx'
 
-export function NavButton({ invert, className, children }) {
+export function NavButton({ invert, className, children, ...props  }) {
   className = clsx(
     className,
     'inline-flex rounded-full px-4 p-1.5 text-sm font-semibold transition',
@@ -10,7 +10,7 @@ export function NavButton({ invert, className, children }) {
   )
 
   return (
-    <button className={className}>
+    <button className={className} {...props}>
       {children}
     </button>
   )
