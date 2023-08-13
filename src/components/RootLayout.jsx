@@ -20,7 +20,7 @@ import { SocialMedia } from '@/components/SocialMedia'
 
 function XIcon() {
   return (
-    <NavButton className = 'inline-flex rounded-full px-4 p-1.5 text-sm font-semibold transition bg-background text-secondary hover:bg-background/70'>
+    <NavButton className = 'inline-flex rounded-full px-4 p-1.5 text-sm font-semibold transition bg-background text-secondary hover:bg-background/70' aria-label="Menu Button">
     <svg viewBox="0 0 24 24" aria-hidden="true" className="h-6 w-6 fill-secondary">
       <path d="m5.636 4.223 14.142 14.142-1.414 1.414L4.222 5.637z" />
       <path d="M4.222 18.363 18.364 4.22l1.414 1.414L5.636 19.777z" />
@@ -31,7 +31,7 @@ function XIcon() {
 
 function MenuIcon() {
   return (
-    <NavButton className = 'inline-flex rounded-full px-4 p-1.5 text-sm font-semibold transition bg-secondary text-background hover:bg-secondary/70'>
+    <NavButton className = 'inline-flex rounded-full px-4 p-1.5 text-sm font-semibold transition bg-secondary text-background hover:bg-secondary/70' aria-label="Menu Button">
     <svg viewBox="0 0 24 24" aria-hidden="true"  className="h-6 w-6">
       <path d="M2 6h20v2H2zM2 16h20v2H2z" className="fill-current text-background" />
     </svg>
@@ -68,8 +68,7 @@ function Header({
           <Button href="/contact" invert={!invert}>
             Contact us
           </Button>
-          <div
-            role="menu button"
+          <Button
             onClick={onToggle}
             aria-expanded={expanded.toString()}
             aria-controls={panelId}
@@ -77,7 +76,7 @@ function Header({
               'group -m-2.5 rounded-full p-2.5 transition',
               invert ? 'hover:bg-background/10' : 'hover:bg-secondary/10'
             )}
-            aria-label="Menu Button"
+            aria-label="Toggle Menu"
           >
             <Icon
               className={clsx(
@@ -87,7 +86,7 @@ function Header({
                 : 'fill-background group-hover:fill-background/70'
               )}
             />
-          </div>
+          </Button>
         </div>
       </div>
     </Container>
