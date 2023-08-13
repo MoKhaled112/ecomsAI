@@ -69,6 +69,7 @@ function Header({
             Contact us
           </Button>
           <div
+            role="button"
             onClick={onToggle}
             aria-expanded={expanded.toString()}
             aria-controls={panelId}
