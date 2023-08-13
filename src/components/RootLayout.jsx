@@ -69,7 +69,7 @@ function Header({
             Contact us
           </Button>
           <div
-            ref={toggleRef}
+            role="menu button"
             onClick={onToggle}
             aria-expanded={expanded.toString()}
             aria-controls={panelId}
@@ -77,7 +77,7 @@ function Header({
               'group -m-2.5 rounded-full p-2.5 transition',
               invert ? 'hover:bg-background/10' : 'hover:bg-secondary/10'
             )}
-            aria-label="Toggle navigation"
+            aria-label="Menu Button"
           >
             <Icon
               className={clsx(

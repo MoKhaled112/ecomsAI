@@ -165,16 +165,17 @@ export default async function Home() {
     <>
       <Container className="mt-20 sm:mt-28 md:mt-48 mb-20">
         <FadeIn className="max-w-3xl">
-        <h1 class="font-display pl-4 text-4xl sm:text-6xl lg:text-7xl font-medium tracking-tight text-secondary drop-shadow-md [text-wrap:balance]">
+        <h1 class="font-display text-4xl sm:text-6xl lg:text-7xl font-medium tracking-tight text-secondary [text-wrap:balance]">
           Your business is
           </h1>
-          <div class="inline-block px-4 pt-2 pb-2 bg-neutral-900 rounded-lg">
-          <h1 class="heroGradient font-display text-4xl sm:text-6xl lg:text-7xl font-medium tracking-tight [text-wrap:balance]">OVERSPENDING.</h1>
-          </div>
-
+          <h1 className=" heroGradient font-display text-4xl sm:text-6xl lg:text-7xl font-medium tracking-tight [text-wrap:balance]">OVERSPENDING.</h1>
           <p className="mt-6 text-lg sm:text-2xl text-secondary/80">
-          We pioneer AI-powered customer support bots, marketing bots, and automations, driven by innovation and a passion for exceptional customer experiences. <a className='text-primary underline' href='/about'>Learn more</a>
+          We pioneer AI-powered customer support bots, marketing bots, and automations, driven by innovation and a passion for exceptional customer experiences.
           </p>
+          <div className="flex justify-start align-middle">
+          <a className='inline-block bg-primary text-background px-4 pt-2 pb-2 rounded-lg font-bold mt-6 hover:opacity-80' href='/about'>About us</a>
+          <a className='inline-block bg-accent text-secondary px-4 pt-2 pb-2 rounded-lg font-bold mt-6 ml-2 hover:opacity-80' href='/services'>Our services</a>
+          </div>
         </FadeIn>
       </Container>
 
