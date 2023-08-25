@@ -21,8 +21,6 @@ export default function Layout({ children }) {
           </svg>
         </a>
       </body>
-
     </html>
-
   )
 }

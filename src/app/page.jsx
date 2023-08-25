@@ -37,7 +37,7 @@ function Technologies() {
   className="mt-10 grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-3"
 >
   {technologies.map(([technology, logo]) => (
-    <li key={technology}>
+    <li key={technology} className="flex justify-center">
       <div className="max-w-[250px] max-h-[100px] flex justify-between">
         <FadeIn>
           <Image src={logo} alt={technology} className="object-contain h-full" loading="lazy" decoding="async" />
